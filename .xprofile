@@ -1,0 +1,11 @@
+xrdb -merge ~/.Xresources
+
+feh --bg-fill ~/wallpapers/rain.jpg
+unclutter -idle 1 -root &
+
+conky &
+cava &
+
+compton -b --backend glx -fcCz -l -17 -t -17 -i 0.6  \
+  --focus-exclude '_NET_WM_NAME@:s = "rofi"' \
+  --focus-exclude 'class_g = "conky"'
